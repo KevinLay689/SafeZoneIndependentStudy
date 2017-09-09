@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SafeZone</string>
+    <string name="title_activity_find_safe_zone">Map</string>
+</resources>
