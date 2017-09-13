@@ -267,10 +267,10 @@ public class MainActivity extends AppCompatActivity {
         //startActivity(intent);
         GetCord g1 = new GetCord(this);
 
-        g1.execute("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+
+        g1.execute("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" +
                 latitudeNetwork+","+
-                longitudeNetwork +
-                "&radius=2000&type=hospital&key=AIzaSyB3M61gC9Ymr4PRZs_xwg8tt2idChJgHJU");
+                longitudeNetwork+
+                "&radius=2000&type=hospital&key=AIzaSyC5WjIsxwWhJr7DV8Cyyc-3wPIp7dxwLqk");
 
     }
 
@@ -288,12 +288,12 @@ public class MainActivity extends AppCompatActivity {
             requestPermissions(new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, 101);
             Toast.makeText(this,"Did not work",Toast.LENGTH_LONG).show();
         }
-        locationManager.removeUpdates(locationListenerNetwork);
+        //locationManager.removeUpdates(locationListenerNetwork);
         //button.setText("Nope");
 
 
         locationManager.requestLocationUpdates(
-                LocationManager.GPS_PROVIDER, 60 * 10, 10, locationListenerNetwork);
+                LocationManager.NETWORK_PROVIDER, 60 * 10, 10, locationListenerNetwork);
         Log.d("Test", "onClic212k: "+ "still empty ");
         //Toast.makeText(this, "Network provider started running", Toast.LENGTH_LONG).show();
         //button.setText("Yes");
