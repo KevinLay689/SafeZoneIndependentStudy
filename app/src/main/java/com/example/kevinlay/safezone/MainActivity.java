@@ -303,6 +303,18 @@ public class MainActivity extends AppCompatActivity {
         public void onLocationChanged(Location location) {
             longitudeNetwork = location.getLongitude();
             latitudeNetwork = location.getLatitude();
+            // Send the Location here
+            // Website is down so comment out until website is back up
+            // www.kevinlay.000webhostapp.com/phpPostScript
+            /*
+            try {
+                    ArrayList<String> postParameters = new ArrayList<>;
+                    postParameters.add(longitudeNetwork);
+                    postParameters.add(latitudeNetwork);
+                    CustomHttpClient.executeHttpPost("http://kevinlay.000webhostapp.com/phpPostScript", postParameters);
+                } catch (Exception e) {
+                }
+             */
             Log.d("Test", "onClic212k: "+ longitudeNetwork);
             imp = true;
             runOnUiThread(new Runnable() {
